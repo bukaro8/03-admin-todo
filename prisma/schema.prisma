@@ -9,11 +9,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-
-model Todo{
-  id String @id @default(uuid())
+model Todo {
+  id          String   @id @default(uuid())
   description String
-  complete Boolean @default(false)
-  createAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  complete    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
